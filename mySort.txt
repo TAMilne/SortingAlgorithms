@@ -1,0 +1,35 @@
+Gnome Sort
+The main concept to this sort is to swap adjacent elements. The index will look at the current element and pervious element to make sure they are in the correct order and perform a swap if it is not.
+
+
+public void gnomeSort(Shape[] arr, int n, Comparator comp) {
+	//Declare Index variable
+	int index = 0;    						// 1 Assignment
+	
+		
+	while(index < n) {    						// 1 Comparrison
+
+		//If the list is at 0 it steps to one to maximize efficiency
+		if(index == 0)    					// 1 Comparrison
+			index++;  					// 2 Arithmetic and Assignment
+
+		// If Shape 1 is less than the previous index will increment
+		if(comp.compare(arr[index], arr[index-1]) <= 0)    	// 2 Arithmetic and Comparrison
+				index++; 				// 2 Arithmetic and Assignment
+		// Else Shapes will be swapped and index will be decremented
+		// If Decremented Index will remain on the same Shape as it was also swapped backwards
+		// Thus it will perform same test on Shape now that it is back a spot
+		// This will repeat until Shapes are in correct order
+		else {
+			Shape temp = arr[i];  				// 1 Assignment
+			arr[i] = arr[j]; 				// 1 Assignment
+			arr[j] = temp; 					// 1 Assignment
+		index--;						// 2 Arithmetic and Assignment
+		}
+		
+	}
+return;
+}
+
+f(n) = 11(n) + 1
+
